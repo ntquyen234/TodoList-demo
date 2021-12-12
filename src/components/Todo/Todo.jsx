@@ -26,15 +26,13 @@ function Todo(props) {
 
 	const [filterStatus, setFilterStatus] = useState('all');
 
-	const handleTodoClick = (todo, idx) => {
+	const handleTodoClick = (todo) => {
 		console.log(todo);
 		const newTodoList = [...todoList];
 
-		newTodoList[idx] = {
-			...newTodoList[idx],
-			status: newTodoList[idx].status === 'new' ? 'completed' : 'new',
-		};
+		const currentTodo = newTodoList.find((x) => x.id == todo.id);
 
+		currentTodo.status = currentTodo.status === 'new' ? 'completed' : 'new';
 		setTodoList(newTodoList);
 	};
 
@@ -59,17 +57,12 @@ function Todo(props) {
 	const renderTodoList = todoList.filter((todo) => filterStatus === 'all' || filterStatus === todo.status);
 
 	const handleFormSubmit = (input) => {
-		console.log(input);
-
 		const newTodo = {
 			id: Math.floor(Math.random() * 100),
 			...input,
 		};
-
 		const newTodoList = [...todoList];
-
 		newTodoList.push(newTodo);
-
 		setTodoList(newTodoList);
 	};
 
