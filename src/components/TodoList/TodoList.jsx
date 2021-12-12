@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { RiDeleteBinLine } from 'react-icons/ri';
+import TodoItem from '../TodoItem/TodoItem';
 import styles from './TodoList.module.css';
 
 TodoList.propTypes = {
@@ -22,30 +23,16 @@ function TodoList({ todoList, onTodoClick, removeTodo }) {
 
 		onTodoClick(todo, idx);
 	};
-	const removeTodoClick = (todo, idx) => {
+	const removeTodoClick = (todo) => {
 		if (!removeTodo) return;
 
-		removeTodo(todo, idx);
+		removeTodo(todo);
 	};
 
 	return (
 		<ul className="todo-list">
-			{todoList.map((todo, idx) => (
-				<li className={styles['todo-item']}>
-					<div
-						key={todo.id}
-						className={classNames({
-							[styles['todo-text']]: true,
-							[styles['completed']]: todo.status === 'completed',
-						})}
-						onClick={() => handleTodoClick(todo, idx)}
-					>
-						{todo.text}
-					</div>
-					<div className="icons">
-						<RiDeleteBinLine onClick={() => removeTodoClick(todo, idx)} className={styles['delete-icon']} />
-					</div>
-				</li>
+			{todoList.map((todo) => (
+				<TodoItem todo={todo} handleTodoClick={handleTodoClick} removeTodoClick={removeTodoClick} key={todo.id} />
 			))}
 		</ul>
 	);
