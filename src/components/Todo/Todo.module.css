@@ -1,0 +1,25 @@
+.todo {
+	margin: 100px auto;
+	padding: 0 20px 20px;
+	width: 600px;
+	text-align: center;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button-show {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.btn {
+	padding: 10px 20px;
+	margin: 5px 5px 10px;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.btn:hover {
+	border-bottom-color: #fa4c53;
+}

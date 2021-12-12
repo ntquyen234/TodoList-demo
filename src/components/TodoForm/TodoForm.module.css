@@ -1,0 +1,24 @@
+.input-submit,
+.button-submit {
+	border: 1px solid #eee;
+	padding: 15px 25px;
+	border-radius: 10px;
+}
+.button-submit:hover {
+	color: white;
+	background-color: #fa4c53;
+}
+
+.input-submit,
+.input-submit {
+	margin-right: 10px;
+}
+
+.input-submit:focus {
+	border-color: #fa4c53;
+}
+.completed {
+	text-decoration: line-through;
+	color: #fa4c53;
+	font-style: italic;
+}

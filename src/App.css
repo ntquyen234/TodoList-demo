@@ -1,97 +1,28 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    background-color: #fbfbfd;
-    font-family: "Poppins", sans-serif;
+	background-color: #fbfbfd;
+	font-family: 'Poppins', sans-serif;
 }
 
 input,
 button {
-    outline: none;
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-}
-
-.todo {
-    margin: 100px auto;
-    padding: 0 20px 20px;
-    width: 600px;
-    text-align: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
 }
 
 h1 {
-    padding: 15px;
-    color: #291667;
-    font-size: 40px;
-}
-
-.todo-text,
-.completed,
-.delete-icon {
-    cursor: pointer;
-}
-
-.completed {
-    text-decoration: line-through;
-    color: #fa4c53;
-    font-style: italic;
-}
-
-.todo-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    padding: 15px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    background-color: #fff;
+	padding: 15px;
+	color: #291667;
+	font-size: 40px;
 }
 
 button {
-    margin-bottom: 20px;
-    display: inline-block;
-}
-
-.input-submit,
-.button-submit {
-    border: 1px solid #eee;
-    padding: 15px 25px;
-    border-radius: 10px;
-}
-
-.input-submit {
-    margin-right: 10px;
-}
-
-.button-submit:hover {
-    color: white;
-    background-color: #fa4c53;
-}
-
-.input-submit:focus {
-    border-color: #fa4c53;
-}
-
-.button-show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn {
-    padding: 10px 20px;
-    margin: 5px 5px 10px;
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.btn:hover {
-    border-bottom-color: #fa4c53;
+	margin-bottom: 20px;
+	display: inline-block;
 }
