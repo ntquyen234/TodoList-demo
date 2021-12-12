@@ -5,8 +5,6 @@ import { RiDeleteBinLine } from 'react-icons/ri';
 import styles from './TodoItem.module.css';
 
 const TodoItem = ({ todo, handleTodoClick, removeTodoClick }) => {
-	const [count, setCount] = useState(0);
-
 	return (
 		<li className={styles['todo-item']}>
 			<div
@@ -16,11 +14,10 @@ const TodoItem = ({ todo, handleTodoClick, removeTodoClick }) => {
 					[styles['completed']]: todo.status === 'completed',
 				})}
 				onClick={() => {
-					setCount(count + 1);
 					handleTodoClick(todo);
 				}}
 			>
-				{count} - {todo.text}
+				{todo.text}
 			</div>
 			<div className="icons">
 				<RiDeleteBinLine onClick={() => removeTodoClick(todo)} className={styles['delete-icon']} />
